@@ -4,8 +4,6 @@ exports.totalize = void 0;
 exports.totalize = function (basket) {
     if (basket.length == 0)
         return 0.0;
-    var total = 0.0;
-    basket.forEach(function (item) { return total += item.unitPrice * item.quantity; });
-    return total;
+    return basket.reduce(function (total, item) { return total += item.unitPrice * item.quantity; }, 0);
 };
 //# sourceMappingURL=shopping_basket.js.map
