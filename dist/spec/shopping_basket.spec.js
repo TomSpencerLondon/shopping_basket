@@ -15,5 +15,18 @@ describe("Shopping Basket Total", function () {
         ];
         expect(shopping_basket_1.totalize(basket)).toBe(10.0);
     });
+    it('is unit price * quantity of a single item', function () {
+        var basket = [
+            { unitPrice: 10.0, quantity: 2 }
+        ];
+        expect(shopping_basket_1.totalize(basket)).toBe(20.0);
+    });
+    it('is sum of unit price * quantity for all items', function () {
+        var basket = [
+            { unitPrice: 10.0, quantity: 1 },
+            { unitPrice: 20.0, quantity: 2 }
+        ];
+        expect(shopping_basket_1.totalize(basket)).toBe(50.0);
+    });
 });
 //# sourceMappingURL=shopping_basket.spec.js.map

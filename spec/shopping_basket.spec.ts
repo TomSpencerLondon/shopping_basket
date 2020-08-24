@@ -17,4 +17,22 @@ describe("Shopping Basket Total", () => {
     expect(totalize(basket)).toBe(10.0);
 
   });
+
+  it('is unit price * quantity of a single item', () => {
+    const basket = [
+      {unitPrice: 10.0, quantity: 2}
+    ];
+
+    expect(totalize(basket)).toBe(20.0);
+  })
+
+  it('is sum of unit price * quantity for all items', () => {
+    const basket = [
+      {unitPrice: 10.0, quantity: 1},
+      {unitPrice: 20.0, quantity: 2}
+
+    ];
+
+    expect(totalize(basket)).toBe(50.0);
+  })
 })
