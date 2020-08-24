@@ -1,0 +1,30 @@
+{
+  "name": "shopping_basket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "jasmine-ts-console-reporter": "^3.1.1"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.5.13",
+    "jasmine": "^3.6.1",
+    "nyc": "^15.1.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  },
+  "scripts": {
+    "test": "ts-node node_modules/jasmine/bin/jasmine --config=./spec/support/jasmine.json",
+    "coverage": "nyc -r text -e .ts -x \"tests/*.test.ts\" npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomSpencerLondon/shopping_basket.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TomSpencerLondon/shopping_basket/issues"
+  },
+  "homepage": "https://github.com/TomSpencerLondon/shopping_basket#readme"
+}
