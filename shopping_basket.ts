@@ -1,3 +1,6 @@
 export const totalize = (basket) => {
-  return undefined;
+  if (basket.length == 0)
+    return 0.0;
+
+  return basket[0].unitPrice;
 }
